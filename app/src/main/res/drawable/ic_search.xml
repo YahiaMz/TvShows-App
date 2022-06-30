@@ -1,0 +1,4 @@
+<vector android:height="@dimen/searchIconSizer" android:viewportHeight="700"
+    android:viewportWidth="700" android:width="@dimen/searchIconSizer" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FFE0E0E0" android:pathData="m333.17,95.203c-92.699,0 -167.97,75.27 -167.97,167.97s75.27,167.97 167.97,167.97c44.375,0 84.738,-17.164 114.78,-45.316l77.16,77.336c2.188,2.188 5.863,2.188 8.047,0 2.188,-2.188 2.188,-5.688 0,-7.875l-77.336,-77.336c28.082,-30.027 45.316,-70.465 45.316,-114.78 0,-92.699 -75.27,-167.97 -167.97,-167.97zM333.17,106.402c86.648,0 156.77,70.125 156.77,156.77 0,86.648 -70.125,156.77 -156.77,156.77s-156.77,-70.125 -156.77,-156.77c0,-86.648 70.125,-156.77 156.77,-156.77z"/>
+</vector>

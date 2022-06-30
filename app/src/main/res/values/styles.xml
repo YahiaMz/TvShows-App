@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedImageView" >
+        <item name="cornerSize" >12dp</item>
+    </style>
+
+    <style name="tvStyle">
+        <item name="android:fontFamily">@font/sf_regular</item>
+    </style>
+
+
+</resources>

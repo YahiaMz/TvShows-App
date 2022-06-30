@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<variable
+    name="tvShow"
+    type="com.aplication.moviesapp.models.TvShow"
+    />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:elevation="@dimen/margin2dp"
+        android:shadowColor="@color/white_"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:id="@+id/tvShowContainer"
+        android:padding="@dimen/dimens8dp"
+        android:background="@drawable/item_container_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/movieImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="5:7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".3"
+
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+
+          />
+
+        <TextView
+            android:id="@+id/txtV_movieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim16dp"
+            android:layout_marginTop="@dimen/dimens8dp"
+            android:textColor="#E0E0E0"
+            android:ellipsize="end"
+            android:text="@{tvShow.name}"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sf_regular"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movieImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens8dp"
+            android:text="@{tvShow.network + ` ( ` + tvShow.country +` ) `}"
+            app:layout_constraintHorizontal_bias="0"
+            android:textColor="@color/yellow700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtV_movieName"
+            app:layout_constraintTop_toBottomOf="@+id/txtV_movieName" />
+
+        <TextView
+            android:id="@+id/txtV_startedOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_light"
+            android:text="@{ ` started on ` + tvShow.start_date }"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:textColor="#A0FFFFFF"
+            android:layout_marginTop="@dimen/dimens8dp"
+            app:layout_constraintStart_toStartOf="@+id/companyName"
+            app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+
+        <TextView
+            android:id="@+id/txtV_filmState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{tvShow.state}"
+            android:textColor="@color/colorTextOther"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtV_startedOn"
+            app:layout_constraintTop_toBottomOf="@id/txtV_startedOn"
+            android:layout_marginTop="@dimen/dimens8dp"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

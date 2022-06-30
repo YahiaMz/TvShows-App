@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="text"
+            type="String" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isLoadingMoreMovies"
+            type="Boolean" />
+
+        <variable
+            name="mostPopularTvShowsAdapter"
+            type="com.aplication.moviesapp.adapters.PopularTvShowsAdapter" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".activities.MainActivity">
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/layout_header_bg"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimens8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/dim16dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:fontFamily="@font/sf_medium"
+                android:gravity="center_vertical"
+                android:text="@string/tv_shows_most_popular"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="20sp"
+                 />
+
+
+            <ImageView
+                android:id="@+id/SearchImageView"
+                android:layout_width="0dp"
+                android:paddingTop="@dimen/dimens8dp"
+                android:src="@drawable/ic_search"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+           />
+
+            <ImageView
+                android:paddingTop="@dimen/dimens8dp"
+                android:id="@+id/watchListImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_watch_list"
+                android:backgroundTint="@color/colorTextIcons"
+                android:scaleType="centerInside"
+
+                />
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/loadingMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/colorTextOther"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:visibility="@{isLoading ? View.VISIBLE : View.GONE , default = visible}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/moviesRv"
+
+            android:layout_marginTop="@dimen/dimens8dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margin2dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:adapter="@{mostPopularTvShowsAdapter}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+            app:spanCount="2"
+            tools:listitem="@layout/item_container" />
+
+        <ProgressBar
+            android:visibility="@{isLoadingMoreMovies ? View.VISIBLE : View.GONE , default = gone}"
+            android:id="@+id/loadingMoreMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/colorTextOther"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginBottom="@dimen/margin4dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies App</string>
+    <string name="tv_shows_most_popular">TV Shows | Most popular</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="episodes">Episodes</string>
+    <string name="my_tvshow">My TvShow</string>
+    <string name="search">search</string>
+</resources>

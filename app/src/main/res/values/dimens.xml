@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimens8dp">8dp</dimen>
+    <dimen name="dimens14sp">14dp</dimen>
+    <dimen name="dim_24dp">24dp</dimen>
+    <dimen name="dim16dp">16dp</dimen>
+    <dimen name="dimen5dp">5dp</dimen>
+    <dimen name="margin4dp">4dp</dimen>
+    <dimen name="dim_16sp">16sp</dimen>
+    <dimen name="d32_dp">32dp</dimen>
+    <dimen name="d40dp">40dp</dimen>
+    <dimen name="d20sp">20sp</dimen>
+    <dimen name="margin2dp">2dp</dimen>
+    <dimen name="dim_12sp">12sp</dimen>
+    <dimen name="searchIconSizer">32dp</dimen>
+</resources>
